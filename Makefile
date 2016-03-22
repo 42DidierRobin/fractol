@@ -6,7 +6,7 @@
 #    By: Mathiissss <marvin@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 1903/21/21 21:42:42 by rdidier           #+#    #+#              #
-#    Updated: 2016/03/22 13:40:03 by rdidier          ###   ########.fr        #
+#    Updated: 2016/03/22 15:56:14 by rdidier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ SRC		=	sources/main.c							\
 			sources/image.c							\
 			sources/complex.c						\
 			sources/fractol.c						\
+			sources/algo.c							\
+			sources/color.c							\
 
 OBJ		=	$(patsubst src/%.c,./%.o,$(SRC))
 

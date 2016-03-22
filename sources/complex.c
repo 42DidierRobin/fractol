@@ -6,7 +6,7 @@
 /*   By: rdidier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/17 12:39:48 by rdidier           #+#    #+#             */
-/*   Updated: 2016/03/22 13:12:14 by rdidier          ###   ########.fr       */
+/*   Updated: 2016/03/22 15:10:26 by rdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ t_cmplx			*mult_cmplx(t_cmplx *a, t_cmplx *b)
 {
 	return (new_cmplx(a->r * b->r - a->i * b->i,
                       a->r * b->i + a->i * b->r)); 
+}
+
+double			dist_cmplx(t_cmplx *a)
+{
+	return (a->r * a->r + a->i * a->i);
 }
 
 t_cmplx			*add_cmplx(t_cmplx *a, t_cmplx *b)
