@@ -6,11 +6,27 @@
 /*   By: rdidier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/22 13:14:52 by rdidier           #+#    #+#             */
-/*   Updated: 2016/03/25 14:56:54 by rdidier          ###   ########.fr       */
+/*   Updated: 2016/03/25 15:31:47 by rdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+
+void				print_cam(t_frctld *data)
+{
+	mlx_string_put(data->ptr, data->win, 0, 0, 16777215,
+			"Iteration en cours :");
+	mlx_string_put(data->ptr, data->win, 200, 0, 16777215,
+			ft_itoa(data->imax));
+	mlx_string_put(data->ptr, data->win, 0, 20, 16777215,
+			"---------------------------");
+	mlx_string_put(data->ptr, data->win, 0, 40, 16777215,
+			"Move around : w, a, s, d");
+	mlx_string_put(data->ptr, data->win, 0, 60, 16777215,
+			"Zoom : +, -");
+	mlx_string_put(data->ptr, data->win, 0, 80, 16777215,
+			"change iteration : UP DOWN");
+}
 
 static void			data_init_julia(t_frctld *d)
 {
@@ -30,7 +46,7 @@ static t_frctld		*data_init(char *name)
 	d = (t_frctld*)malloc(sizeof(t_frctld));
 	d->ptr = mlx_init();
 	d->win = mlx_new_window(d->ptr, WINDOW_W, WINDOW_H,
-									"Fract'ol by Mathiisss");
+			"Fract'ol by Mathiisss");
 	d->xmin = -1.5;
 	d->xmax = 0.6;
 	d->ymin = -1.2;
@@ -48,7 +64,7 @@ static t_frctld		*data_init(char *name)
 	d->img = (t_img*)malloc(sizeof(t_img));
 	d->img->self = mlx_new_image(d->ptr, WINDOW_W, WINDOW_H);
 	d->img->buff = mlx_get_data_addr(d->img->self, &d->img->bpp,
-										&d->img->bpl, &d->img->endian);
+			&d->img->bpl, &d->img->endian);
 	return (d);
 }
 
@@ -61,6 +77,7 @@ int					launch_it(char *name)
 		return (0);
 	do_it(data);
 	mlx_put_image_to_window(data->ptr, data->win, data->img->self, 0, 0);
+	print_cam(data);
 	mlx_key_hook(data->win, listener, (void*)data);
 	mlx_hook(data->win, 6, (1L << 6), mouse_moove, (void*)data);
 	mlx_mouse_hook(data->win, mouse_click, (void*)data);

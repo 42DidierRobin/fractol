@@ -6,7 +6,7 @@
 /*   By: rdidier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/24 17:46:33 by rdidier           #+#    #+#             */
-/*   Updated: 2016/03/25 14:45:44 by rdidier          ###   ########.fr       */
+/*   Updated: 2016/03/25 15:27:25 by rdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int			mouse_moove(int x, int y, void *data)
 	do_it(d);
 	mlx_clear_window(d->ptr, d->win);
 	mlx_put_image_to_window(d->ptr, d->win, d->img->self, 0, 0);
+	print_cam(d);
 	return (0);
 }
 
@@ -44,5 +45,6 @@ int			mouse_click(int k, int x, int y, void *data)
 	do_it(d);
 	mlx_clear_window(d->ptr, d->win);
 	mlx_put_image_to_window(d->ptr, d->win, d->img->self, 0, 0);
+	print_cam(d);
 	return (1);
 }

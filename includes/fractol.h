@@ -6,7 +6,7 @@
 /*   By: rdidier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 13:26:01 by rdidier           #+#    #+#             */
-/*   Updated: 2016/03/25 15:12:23 by rdidier          ###   ########.fr       */
+/*   Updated: 2016/03/25 15:26:24 by rdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,6 @@ int					burningship(t_frctld *data, int *xy,
 int					launch_it(char *name);
 t_cmplx				*new_cmplx(double r, double i);
 int					pix_on_img(t_img *img, int x, int y, t_color *clr);
+void				print_cam(t_frctld *data);
 
 #endif

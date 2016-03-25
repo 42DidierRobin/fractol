@@ -6,7 +6,7 @@
 /*   By: rdidier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/22 17:41:31 by rdidier           #+#    #+#             */
-/*   Updated: 2016/03/25 15:00:07 by rdidier          ###   ########.fr       */
+/*   Updated: 2016/03/25 15:26:45 by rdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,6 @@ int			listener(int keycode, void *data)
 	mlx_clear_window(d->ptr, d->win);
 	do_it(d);
 	mlx_put_image_to_window(d->ptr, d->win, d->img->self, 0, 0);
+	print_cam(d);
 	return (1);
 }
