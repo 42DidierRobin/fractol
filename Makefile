@@ -6,7 +6,7 @@
 #    By: Mathiissss <marvin@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 1903/21/21 21:42:42 by rdidier           #+#    #+#              #
-#    Updated: 2016/03/25 14:40:45 by rdidier          ###   ########.fr        #
+#    Updated: 2016/03/25 15:12:36 by rdidier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ javel:
 	clear
 
 boom : javel fclean $(NAME) clean
-	./fractol
+	./fractol julia
 
 re: fclean all
 

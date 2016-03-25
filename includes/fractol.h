@@ -6,7 +6,7 @@
 /*   By: rdidier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 13:26:01 by rdidier           #+#    #+#             */
-/*   Updated: 2016/03/25 15:06:55 by rdidier          ###   ########.fr       */
+/*   Updated: 2016/03/25 15:12:23 by rdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # define WINDOW_H 		800
 # define WINDOW_W	 	800
 
-typedef unsigned char	t_t_uchar;
+typedef unsigned char	t_uchar;
 
 typedef struct		s_cmplx
 {
