@@ -6,7 +6,7 @@
 /*   By: rdidier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/22 14:14:01 by rdidier           #+#    #+#             */
-/*   Updated: 2016/03/25 15:00:42 by rdidier          ###   ########.fr       */
+/*   Updated: 2016/03/25 14:54:23 by rdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int				mandelbrot(t_frctld *data, int *xy, t_cmplx *c, t_cmplx *z)
 		z->r = z->r * z->r - z->i * z->i + c->r;
 		z->i = 2 * tmp * z->i + c->i;
 		if ((z->r * z->r + z->i * z->i) > 4.0)
-			break ;
+			break;
 	}
 	return (i);
 }
@@ -87,7 +87,7 @@ int				julia(t_frctld *data, int *xy, t_cmplx *c, t_cmplx *z)
 		z->r = z->r * z->r - z->i * z->i + c->r;
 		z->i = 2 * tmp * z->i + c->i;
 		if ((z->r * z->r + z->i * z->i) > 4.0)
-			break ;
+			break;
 	}
 	return (i);
 }
@@ -113,7 +113,7 @@ int				burningship(t_frctld *data, int *xy, t_cmplx *c, t_cmplx *z)
 		z->r = z->r * z->r - z->i * z->i + c->r;
 		z->i = 2 * tmp * z->i + c->i;
 		if ((z->r * z->r + z->i * z->i) > 4.0)
-			break ;
+			break;
 	}
 	return (i);
 }
