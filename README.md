@@ -6,6 +6,15 @@ This project is meant to create graphically beautiful fractals.
 
 Result -> 108/100 
 
+## About
+####Skills
+Rigor |
+Algorithms & AI |
+Imperative programming |
+Graphics
+####Keywords
+42, project, C, Matrix, Graphic, 2D, 3D, modelization, fractal, complex numbers, infinite, Julia, Mandelbrot, beautiful, Modulo, equation
+
 ## compile
 
     make
